@@ -21,10 +21,18 @@ function page() {
             <One />
             <AlertTitle>Importante!</AlertTitle>
             <AlertDescription>
-            
-Cada una de nuestras soluciones tecnológicas resuelve problemas específicos en la construcción y están interconectadas, formando un ecosistema cohesivo. Al finalizar, estos proyectos se integrarán en un programa único que combinará todas sus funcionalidades para ofrecer una solución completa y optimizada.
+              Cada una de nuestras soluciones tecnológicas resuelve problemas
+              específicos en la construcción y están interconectadas, formando
+              un ecosistema cohesivo. Al finalizar, estos proyectos se
+              integrarán en un programa único que combinará todas sus
+              funcionalidades para ofrecer una solución completa y optimizada.
             </AlertDescription>
           </Alert>
+        </div>
+        <div>
+          {/* filtro de busqueda*/}
+          
+        
         </div>
         <div className="w-[80%] mx-auto text-center items-center grid grid-cols-3 max-[1024px]:grid-cols-3 max-[768px]:grid-cols-2 max-[425px]:grid-cols-1 justify-center mt-4 mb-8 ">
           <CardProyect
@@ -33,6 +41,11 @@ Cada una de nuestras soluciones tecnológicas resuelve problemas específicos en
             title="01-. Speed Structural"
             description="Speed Structural, es una app web que tiene como finalidad optimizar el tiempo de calculo del predimensionamiento y metrado de cargas para un análisis y diseño sísmico."
             url="https://speedstructural.vercel.app/calculos/analisis"
+            slug="1"
+            pro="100"
+            proti="100"
+            
+
           />
           <CardProyect
             color={"default"}
@@ -40,6 +53,9 @@ Cada una de nuestras soluciones tecnológicas resuelve problemas específicos en
             title="02-. Speed Structural plus"
             description="Speed Structural, es una app web que tiene como finalidad optimizar el tiempo de calculo del predimensionamiento y metrado de cargas para un análisis y diseño sísmico."
             url="https://speedstructplus.vercel.app/analisis"
+            slug="2"
+            pro="100"
+            proti="100"
           />
           <CardProyect
             color={"default"}
@@ -47,6 +63,9 @@ Cada una de nuestras soluciones tecnológicas resuelve problemas específicos en
             title="03-. Speed Concrete"
             description=" Esta app permite obtener un diseño de mezcla optimizado y listo para su uso en tus proyectos de construcción. Siguiendo unos sencillos y pocos pasos podrás descarga tu diseño de mezcla."
             url="https://speed-concrete.vercel.app/"
+            slug="#"
+            pro="100"
+            proti="100"
           />
           <CardProyect
             color={"outline"}
@@ -54,6 +73,9 @@ Cada una de nuestras soluciones tecnológicas resuelve problemas específicos en
             title="04-. Speed Planning"
             description="Una aplicación web que permita a los gestores de proyectos de construcción planificar, asignar tareas, monitorear el progreso, y gestionar recursos."
             url="#"
+            slug="#"
+            pro="10"
+            proti="10"
           />
           <CardProyect
             color="destructive"
@@ -61,6 +83,9 @@ Cada una de nuestras soluciones tecnológicas resuelve problemas específicos en
             title="05-. Speed Budget"
             description="Un simulador que permite a los ingenieros y arquitectos calcular presupuestos detallados para proyectos de construcción, tomando en cuenta materiales."
             url="#"
+            slug="#"
+            pro="0"
+            proti="0"
           />
           <CardProyect
             color="destructive"
@@ -68,6 +93,9 @@ Cada una de nuestras soluciones tecnológicas resuelve problemas específicos en
             title="06-. Speed Inventory"
             description="Un sistema que permite a las empresas de construcción gestionar su inventario de materiales de forma eficiente."
             url="#"
+            slug="#"
+            pro="0"
+            proti="0"
           />
           <CardProyect
             color="destructive"
@@ -75,6 +103,9 @@ Cada una de nuestras soluciones tecnológicas resuelve problemas específicos en
             title="07-. Speed Academy"
             description="Una aplicación que ayuda a los estudiantes capacitarse y en el ámbito de la programación orientada ala industria de la construcción."
             url="#"
+            slug="#"
+            pro="0"
+            proti="0"
           />
           <CardProyect
             color="destructive"
@@ -82,6 +113,9 @@ Cada una de nuestras soluciones tecnológicas resuelve problemas específicos en
             title="08-. Geo Speed"
             description="Un software que ayuda a los estudiantes a realizar cálculos geotécnicos, como la capacidad portante del suelo, asentamientos, y estabilidad de taludes."
             url="#"
+            slug="#"
+            pro="0"
+            proti="0"
           />
           <CardProyect
             color="destructive"
@@ -89,6 +123,9 @@ Cada una de nuestras soluciones tecnológicas resuelve problemas específicos en
             title="09-. Speed Materials"
             description="Una aplicación que permite a los estudiantes calcular la cantidad de materiales necesarios para un proyecto, incluyendo concreto, acero, ladrillos, y otros."
             url="#"
+            slug="#"
+            pro="0"
+            proti="0"
           />
         </div>
       </motion.div>
