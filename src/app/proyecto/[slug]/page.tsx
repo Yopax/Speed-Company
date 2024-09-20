@@ -1,22 +1,9 @@
-import { init } from "next/dist/compiled/webpack/webpack";
+import React from 'react'
 
-interface Props{
-  params:{
-    slug:string;
-  }
-}
-
-export default function ({params}:Props) {
-  const {slug} = params;
-  const product = initialData.proyects.find(proyect => proyect.slug === slug);
-
-  if (!proyect) {
-    return <div>Proyecto no encontrado</div>;
-  }
-
-
-
+function page() {
   return (
-    <>
-  );
+    <div>page</div>
+  )
 }
+
+export default page
