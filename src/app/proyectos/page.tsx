@@ -1,10 +1,12 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import One from "@/components/icons/One";
-import CardProyect from "@/components/02_Proyectos/CardProyect";
 import NavBar from "@/components/01_NavBar/NavBar";
+import { initialData } from "@/seed/seed";
+import { CardProyect } from "@/components/02_Proyectos/CardProyect";
+import { MdAccountBox } from "react-icons/md";
+import ButtonLink from "@/components/02_Proyectos/ButtonLink";
+import ToolAcount from "@/components/02_Proyectos/ToolAcount";
 
 function page() {
   return (
@@ -16,117 +18,54 @@ function page() {
         className=" pt-16 "
       >
         <NavBar />
-        <div className="w-[80%] mx-auto mt-8">
-          <Alert>
-            <One />
-            <AlertTitle>Importante!</AlertTitle>
-            <AlertDescription>
-              Cada una de nuestras soluciones tecnológicas resuelve problemas
-              específicos en la construcción y están interconectadas, formando
-              un ecosistema cohesivo. Al finalizar, estos proyectos se
-              integrarán en un programa único que combinará todas sus
-              funcionalidades para ofrecer una solución completa y optimizada.
-            </AlertDescription>
-          </Alert>
+        <div className="flex w-[80%] space-x-4 mx-auto mt-8">
+          <div className="flex border rounded-lg w-full ">
+            <div className="py-5 pl-5 max-[425px]:p-5 rounded-l-lg w-[56%] max-[425px]:w-full">
+              <div className="flex max-[425px]:flex-col text-sm space-x-4 max-[425px]:space-x-0 lnueva w-[90%] max-[425px]:w-full text-gray-500">
+                <div className="border rounded-md  ">
+                  <div
+                    className="cover bg-[url('/foto.jpg')] w-[20%] max-[425px]:w-[30%] rounded-md max-[425px]:h-[40%] h-[40%] max-[425px]:h-1/2 max-[425px]:bg-[url('/puente.jpg')]"
+                  />
+                </div>
+                <div className="w-[90%] max-[425px]:w-full max-[425px]:mx-0 max-[425px]:pt-2 text-xs">
+                  <div className="flex max-[425px]:w-full max-[425px]:items-center">
+                    <div className="flex space-x-2 max-[425px]:w-full">
+                      <div className="text-sm max-[425px]:text-xs font-bold lnueva">
+                        BARRETO DARLI
+                      </div>
+                      <div className="flex items-center">#Founder</div>
+                    </div>
+                    <div className="ml-2 p-1 border rounded-md ">
+                      <MdAccountBox />
+                    </div>
+                  </div>
+                  <div className="font-normal max-[425px]:w-full py-3 max-[425px]:pt-3 max-[425px]:pb-0 inter">
+                    <a className=" underline  decoration-sky-500 font-bold">
+                      Speed S.A.C.
+                    </a>{" "}
+                    crea soluciones tecnológicas y resuelve problemas específicos en la construcción. Por ello, al finalizar los proyectos planificados en esta sección, estos se integrarán en un programa (app) único que combinará todas sus funcionalidades.
+                  </div>
+                  <ButtonLink />
+                </div>
+              </div>
+            </div>
+            <div className="w-[44%] h-full p-5 max-[425px]:hidden">
+              <div className="w-full h-[10%] text-xs font-normal text-slate-600 inter">
+                Heramientas dominadas:
+              </div>
+              <div className="w-full flex h-[90%] justify-between space-x-2">
+                <ToolAcount title="NextJS" url="./nextjs.png" />
+                <ToolAcount title="JavaScript" url="./js.png" />
+                <ToolAcount title="ReactJS" url="./of.png" />
+                <ToolAcount title="Revit" url="./revit.png" />
+                <ToolAcount title="MsProject" url="./ms.png" />
+              </div>
+            </div>
+          </div>
         </div>
-        <div>
-          {/* filtro de busqueda*/}
-          
-        
-        </div>
-        <div className="w-[80%] mx-auto text-center items-center grid grid-cols-3 max-[1024px]:grid-cols-3 max-[768px]:grid-cols-2 max-[425px]:grid-cols-1 justify-center mt-4 mb-8 ">
-          <CardProyect
-            color={"default"}
-            estado="Finalizado"
-            title="01-. Speed Structural"
-            description="Speed Structural, es una app web que tiene como finalidad optimizar el tiempo de calculo del predimensionamiento y metrado de cargas para un análisis y diseño sísmico."
-            url="https://speedstructural.vercel.app/calculos/analisis"
-            slug="1"
-            pro="100"
-            proti="100"
-            
-
-          />
-          <CardProyect
-            color={"default"}
-            estado="Finalizado"
-            title="02-. Speed Structural plus"
-            description="Speed Structural, es una app web que tiene como finalidad optimizar el tiempo de calculo del predimensionamiento y metrado de cargas para un análisis y diseño sísmico."
-            url="https://speedstructplus.vercel.app/analisis"
-            slug="2"
-            pro="100"
-            proti="100"
-          />
-          <CardProyect
-            color={"default"}
-            estado="Finalizado"
-            title="03-. Speed Concrete"
-            description=" Esta app permite obtener un diseño de mezcla optimizado y listo para su uso en tus proyectos de construcción. Siguiendo unos sencillos y pocos pasos podrás descarga tu diseño de mezcla."
-            url="https://speed-concrete.vercel.app/"
-            slug="#"
-            pro="100"
-            proti="100"
-          />
-          <CardProyect
-            color={"outline"}
-            estado="En desarrollo"
-            title="04-. Speed Planning"
-            description="Una aplicación web que permita a los gestores de proyectos de construcción planificar, asignar tareas, monitorear el progreso, y gestionar recursos."
-            url="#"
-            slug="#"
-            pro="10"
-            proti="10"
-          />
-          <CardProyect
-            color="destructive"
-            estado="Pendiente"
-            title="05-. Speed Budget"
-            description="Un simulador que permite a los ingenieros y arquitectos calcular presupuestos detallados para proyectos de construcción, tomando en cuenta materiales."
-            url="#"
-            slug="#"
-            pro="0"
-            proti="0"
-          />
-          <CardProyect
-            color="destructive"
-            estado="Pendiente"
-            title="06-. Speed Inventory"
-            description="Un sistema que permite a las empresas de construcción gestionar su inventario de materiales de forma eficiente."
-            url="#"
-            slug="#"
-            pro="0"
-            proti="0"
-          />
-          <CardProyect
-            color="destructive"
-            estado="Pendiente"
-            title="07-. Speed Academy"
-            description="Una aplicación que ayuda a los estudiantes capacitarse y en el ámbito de la programación orientada ala industria de la construcción."
-            url="#"
-            slug="#"
-            pro="0"
-            proti="0"
-          />
-          <CardProyect
-            color="destructive"
-            estado="Pendiente"
-            title="08-. Geo Speed"
-            description="Un software que ayuda a los estudiantes a realizar cálculos geotécnicos, como la capacidad portante del suelo, asentamientos, y estabilidad de taludes."
-            url="#"
-            slug="#"
-            pro="0"
-            proti="0"
-          />
-          <CardProyect
-            color="destructive"
-            estado="Pendiente"
-            title="09-. Speed Materials"
-            description="Una aplicación que permite a los estudiantes calcular la cantidad de materiales necesarios para un proyecto, incluyendo concreto, acero, ladrillos, y otros."
-            url="#"
-            slug="#"
-            pro="0"
-            proti="0"
-          />
+        <div>{/* filtro de busqueda*/}</div>
+        <div className="w-[80%] mx-auto text-center items-center grid grid-cols-4 max-[1024px]:grid-cols-3 max-[768px]:grid-cols-2 max-[425px]:grid-cols-1 justify-center mt-4 mb-8">
+          <CardProyect projects={initialData.products} />
         </div>
       </motion.div>
     </>
