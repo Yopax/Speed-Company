@@ -43,29 +43,24 @@ function page() {
                     <a className=" underline  decoration-sky-500 font-bold">
                       Speed S.A.C.
                     </a>{" "}
-                    crea soluciones tecnológicas y resuelve problemas específicos en la construcción. Por ello, al finalizar los proyectos planificados en esta sección, estos se integrarán en un programa (app) único que combinará todas sus funcionalidades.
+                    crea soluciones tecnológicas y resuelve problemas específicos en la construcción. Por ello, al finalizar los proyectos planificados en esta sección, estos se integrarán en un programa<a target="_blank" href="https://speed-general-app.vercel.app/" className=" underline  decoration-sky-500 font-bold">(app)</a>  único que combinará todas sus funcionalidades.
                   </div>
                   <ButtonLink />
                 </div>
               </div>
             </div>
             <div className="w-[44%] h-full p-5 max-[425px]:hidden">
-              <div className="w-full h-[10%] text-xs font-normal text-slate-600 inter">
-                Heramientas dominadas:
+              <div className="w-full h-[10%] font-semibold text-xs mb-2 text-slate-600 inter">
+                Stack Empleado:
               </div>
-              <div className="w-full flex h-[90%] justify-between space-x-2">
-                <ToolAcount title="NextJS" url="./nextjs.png" />
-                <ToolAcount title="JavaScript" url="./js.png" />
-                <ToolAcount title="ReactJS" url="./of.png" />
-                <ToolAcount title="Revit" url="./revit.png" />
-                <ToolAcount title="MsProject" url="./ms.png" />
+              <div className="w-full flex h-[85%] justify-between space-x-2">
+                <ToolAcount />
               </div>
             </div>
           </div>
         </div>
-        <div>{/* filtro de busqueda*/}</div>
         <div className="w-[80%] mx-auto text-center items-center grid grid-cols-4 max-[1024px]:grid-cols-3 max-[768px]:grid-cols-2 max-[425px]:grid-cols-1 justify-center mt-4 mb-8">
-          <CardProyect projects={initialData.products} />
+          <CardProyect projects={initialData.proyectos} />
         </div>
       </motion.div>
     </>

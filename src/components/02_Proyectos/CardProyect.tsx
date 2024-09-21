@@ -22,7 +22,7 @@ export const CardProyect = ({ projects }: Props) => {
           <p className="dark:text-white text-neutral-900 text-sm leading-6 font-bold py-4 px-3 rounded-lg">
             {project.title}
           </p>
-          <p className="w-[76%] text-xs text-justify inter text-neutral-500 font-normal mb-4 dark:text-white">
+          <p className="w-[76%] h-[30%] text-xs text-justify inter text-neutral-500 font-normal mb-4 dark:text-white">
             {project.description}
           </p>
           <div className="flex w-[76%] justify-between space-x-2">
@@ -47,7 +47,7 @@ export const CardProyect = ({ projects }: Props) => {
                   value={project.progres}
                 />
                 <p
-                  className="absolute inset-0 flex items-center justify-center text-white text-[10px] font-normal"
+                  className="absolute inset-0 flex items-center justify-center text-black text-[10px] font-normal"
                   style={{ zIndex: 1 }}
                 >
                   {project.proti}%
