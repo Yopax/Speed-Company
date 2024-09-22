@@ -7,6 +7,9 @@ import { CardProyect } from "@/components/02_Proyectos/CardProyect";
 import { MdAccountBox } from "react-icons/md";
 import ButtonLink from "@/components/02_Proyectos/ButtonLink";
 import ToolAcount from "@/components/02_Proyectos/ToolAcount";
+import { Button } from "@/components/ui/button";
+import { Link } from "lucide-react";
+import Filter from "@/components/02_Proyectos/Filter";
 
 function page() {
   return (
@@ -15,7 +18,7 @@ function page() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
-        className=" pt-16 "
+        className=" pt-10 text-gray-600 "
       >
         <NavBar />
         <div className="flex w-[80%] space-x-4 mx-auto mt-8">
@@ -23,9 +26,7 @@ function page() {
             <div className="py-5 pl-5 max-[425px]:p-5 rounded-l-lg w-[56%] max-[425px]:w-full">
               <div className="flex max-[425px]:flex-col text-sm space-x-4 max-[425px]:space-x-0 lnueva w-[90%] max-[425px]:w-full text-gray-500">
                 <div className="border rounded-md  ">
-                  <div
-                    className="cover bg-[url('/foto.jpg')] w-[20%] max-[425px]:w-[30%] rounded-md max-[425px]:h-[40%] h-[40%] max-[425px]:h-1/2 max-[425px]:bg-[url('/puente.jpg')]"
-                  />
+                  <div className="cover bg-[url('/foto.jpg')] w-[20%] max-[425px]:w-[30%] rounded-md  h-[40%] max-[425px]:h-1/2 max-[425px]:bg-[url('/puente.jpg')]" />
                 </div>
                 <div className="w-[90%] max-[425px]:w-full max-[425px]:mx-0 max-[425px]:pt-2 text-xs">
                   <div className="flex max-[425px]:w-full max-[425px]:items-center">
@@ -43,7 +44,18 @@ function page() {
                     <a className=" underline  decoration-sky-500 font-bold">
                       Speed S.A.C.
                     </a>{" "}
-                    crea soluciones tecnológicas y resuelve problemas específicos en la construcción. Por ello, al finalizar los proyectos planificados en esta sección, estos se integrarán en un programa<a target="_blank" href="https://speed-general-app.vercel.app/" className=" underline  decoration-sky-500 font-bold">(app)</a>  único que combinará todas sus funcionalidades.
+                    crea soluciones tecnológicas y resuelve problemas
+                    específicos en la construcción. Por ello, al finalizar los
+                    proyectos planificados en esta sección, estos se integrarán
+                    en un programa
+                    <a
+                      target="_blank"
+                      href="https://speed-general-app.vercel.app/"
+                      className=" underline  decoration-sky-500 font-bold"
+                    >
+                      (app)
+                    </a>{" "}
+                    único que combinará todas sus funcionalidades.
                   </div>
                   <ButtonLink />
                 </div>
@@ -59,7 +71,8 @@ function page() {
             </div>
           </div>
         </div>
-        <div className="w-[80%] mx-auto text-center items-center grid grid-cols-4 max-[1024px]:grid-cols-3 max-[768px]:grid-cols-2 max-[425px]:grid-cols-1 justify-center mt-4 mb-8">
+        <Filter />
+        <div className="w-[80%] mx-auto text-center items-center grid grid-cols-4 max-[1024px]:grid-cols-3 max-[768px]:grid-cols-2 max-[425px]:grid-cols-1 justify-center mt-2 mb-8">
           <CardProyect projects={initialData.proyectos} />
         </div>
       </motion.div>
