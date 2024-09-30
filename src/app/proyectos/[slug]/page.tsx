@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { initialData } from "@/seed/seed";
 import { motion } from "framer-motion";
