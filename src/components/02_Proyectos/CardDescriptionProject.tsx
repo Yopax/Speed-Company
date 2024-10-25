@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+
 
 function CardDescriptionProject() {
   return (
     <>
-      
+
     </>
-  )
+  );
 }
 
-export default CardDescriptionProject
+export default CardDescriptionProject;

@@ -9,7 +9,7 @@ function Filter() {
     <>
       <div className="flex max-[425px]:flex-col px-2 max-[425px]:px-0 w-[80%] mt-3 justify-between mx-auto space-x-2 max-[425px]:space-x-0 items-center">
         <div className="flex space-x-2 items-center">
-          <p className="text-black dark:text-white text-lg lnueva font-bold max-[425px]:mb-2">Proyectos</p>
+          <p className="text-black dark:text-white text-lg lnueva font-bold max-[425px]:mb-2"></p>
         </div>
         <div className="flex space-x-2">
           <Button className="border-slate-300 max-[425px]:border bg-white ">

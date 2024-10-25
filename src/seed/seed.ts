@@ -25,7 +25,7 @@ export const initialData: SeedData = {
       description:
         "Speed Structural, es una app web que tiene como finalidad optimizar el tiempo de cálculo del predimensionamiento y metrado de cargas para un análisis y diseño sísmico.",
       status: "Terminado",
-      images: ["1740176-00-A_0_2000.jpg"],
+      images: ["a1.jpg"],
       inStock: 7,
       progres: 100,
       proti: "100",

@@ -22,7 +22,7 @@ function page() {
       >
         <NavBar />
         <div className="flex w-[80%] space-x-4 mx-auto mt-8">
-          <div className="flex border rounded-lg w-full ">
+          <div className="flex border bg-gradient-to-r from-emerald-400 to-cyan-400 rounded-lg w-full ">
             <div className="py-5 pl-5 max-[425px]:p-5 rounded-l-lg w-[56%] max-[425px]:w-full">
               <div className="flex max-[425px]:flex-col text-sm space-x-4 max-[425px]:space-x-0 lnueva w-[90%] max-[425px]:w-full text-gray-500">
                 <div className="border rounded-md  ">
@@ -32,15 +32,15 @@ function page() {
                   <div className="flex max-[425px]:w-full max-[425px]:items-center">
                     <div className="flex space-x-2 max-[425px]:w-full">
                       <div className="text-sm max-[425px]:text-xs font-bold lnueva">
-                        BARRETO DARLI
+                        Proyectos
                       </div>
-                      <div className="flex items-center">#Founder</div>
+                      <div className="flex items-center">#Respositorio</div>
                     </div>
                     <div className="ml-2 p-1 border rounded-md ">
                       <MdAccountBox />
                     </div>
                   </div>
-                  <div className="font-normal max-[425px]:w-full py-3 max-[425px]:pt-3 max-[425px]:pb-0 inter">
+                  <div className="font-normal text-white max-[425px]:w-full py-3 max-[425px]:pt-3 max-[425px]:pb-0 inter">
                     <a className=" underline  decoration-sky-500 font-bold">
                       Speed S.A.C.
                     </a>{" "}

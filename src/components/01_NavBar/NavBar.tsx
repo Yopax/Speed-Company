@@ -21,8 +21,8 @@ function NavBar() {
           >
             By{" "}
             <div className="flex space-x-2 justify-center text-center items-center">
-              <p className="text-2xl font-extrabold text-black dark:text-white">
-                SPEED
+              <p className="text-lg 2xl:text-2xl font-extrabold text-black dark:text-white">
+                Darli Barreto
               </p>
               <p className="text-lg">©</p>
             </div>
