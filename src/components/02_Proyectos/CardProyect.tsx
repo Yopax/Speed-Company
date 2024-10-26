@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { MdInfoOutline } from "react-icons/md";
 import { Progress } from "@/components/ui/progress";
+import {
+  Pagination,
+  PaginationContent,
+  PaginationItem,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/components/ui/pagination";
 import { Project } from "@/interfaces";
 
 interface Props {
@@ -11,11 +18,38 @@ interface Props {
 }
 
 export const CardProyect = ({ projects }: Props) => {
+  const rowsPerPage = 8;
+  const [currentPage, setCurrentPage] = useState(1);
+  const [statusFilter, setStatusFilter] = useState<string>(""); // Estado del filtro
+
+  // Filtrar proyectos según el estado seleccionado
+  const filteredProjects = statusFilter
+    ? projects.filter((project) => project.status === statusFilter)
+    : projects;
+
+  const totalPages = Math.ceil(filteredProjects.length / rowsPerPage);
+  const currentProjects = filteredProjects.slice(
+    (currentPage - 1) * rowsPerPage,
+    currentPage * rowsPerPage
+  );
+
+  const handlePrevious = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+    }
+  };
+
+  const handleNext = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
+
   return (
     <>
-      {projects.map((project) => (
+      {currentProjects.map((project) => (
         <div
-          key={project.slug}
+          key={project.id}
           className="flex mx-2 my-2 max-sm:mx-0 flex-col border items-center justify-center font-bold rounded-md h-[330px]"
         >
           <Badge variant={project.statuscolor}>{project.status}</Badge>
@@ -39,8 +73,9 @@ export const CardProyect = ({ projects }: Props) => {
           </div>
           <div className="flex-col mx-auto space-x-2 w-[76%] my-2">
             <div className="w-full flex items-center">
-              <label className="text-xs text-start font-normal lnueva w-1/3 mr-2">Progreso:</label>
-
+              <label className="text-xs text-start font-normal lnueva w-1/3 mr-2">
+                Progreso:
+              </label>
               <div className="relative w-2/3">
                 <Progress
                   className="border border-gray-950 h-4 w-full"
@@ -57,6 +92,53 @@ export const CardProyect = ({ projects }: Props) => {
           </div>
         </div>
       ))}
+
+      {/* Paginación */}
+      <div className="flex space-x-10 items-center justify-between">
+        <div className="flex justify-center my-4">
+          <Pagination>
+            <PaginationContent>
+              <PaginationItem>
+                <PaginationPrevious
+                  className={
+                    currentPage === 1
+                      ? "pointer-events-none opacity-50 text-black text-xs letratwo font-semibold"
+                      : undefined
+                  }
+                  onClick={handlePrevious}
+                />
+              </PaginationItem>
+
+              <PaginationItem>
+                <PaginationNext
+                  className={
+                    currentPage === totalPages
+                      ? "pointer-events-none opacity-50 "
+                      : undefined
+                  }
+                  onClick={handleNext}
+                />
+              </PaginationItem>
+            </PaginationContent>
+          </Pagination>
+        </div>
+        <div className="flex space-x-2 items-center ">
+          <p className="text-black text-xs letratwo font-semibold">Filtrado:</p>
+          <select
+            value={statusFilter}
+            onChange={(e) => {
+              setStatusFilter(e.target.value);
+              setCurrentPage(1); // Reiniciar la página al cambiar el filtro
+            }}
+            className="border text-black text-xs letratwo font-semibold rounded-md p-2"
+          >
+            <option value="">Todos</option>
+            <option value="Terminado">Terminado</option>
+            <option value="Pendiente">Pendiente</option>
+            <option value="En Desarrollo">En Desarrollo</option>
+          </select>
+        </div>
+      </div>
     </>
   );
 };

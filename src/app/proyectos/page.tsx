@@ -7,9 +7,8 @@ import { CardProyect } from "@/components/02_Proyectos/CardProyect";
 import { MdAccountBox } from "react-icons/md";
 import ButtonLink from "@/components/02_Proyectos/ButtonLink";
 import ToolAcount from "@/components/02_Proyectos/ToolAcount";
-import { Button } from "@/components/ui/button";
-import { Link } from "lucide-react";
-import Filter from "@/components/02_Proyectos/Filter";
+import {Filter} from "@/components/02_Proyectos/Filter";
+
 
 function page() {
   return (
@@ -42,20 +41,15 @@ function page() {
                   </div>
                   <div className="font-normal text-white max-[425px]:w-full py-3 max-[425px]:pt-3 max-[425px]:pb-0 inter">
                     <a className=" underline  decoration-sky-500 font-bold">
-                      Speed S.A.C.
+                    Explora 
                     </a>{" "}
-                    crea soluciones tecnológicas y resuelve problemas
-                    específicos en la construcción. Por ello, al finalizar los
-                    proyectos planificados en esta sección, estos se integrarán
-                    en un programa
-                    <a
-                      target="_blank"
-                      href="https://speed-general-app.vercel.app/"
-                      className=" underline  decoration-sky-500 font-bold"
-                    >
-                      (app)
-                    </a>{" "}
-                    único que combinará todas sus funcionalidades.
+                    mi trabajo en proyectos de ingeniería y desarrollo
+                    web, donde combino habilidades en programación, gestión y
+                    diseño UX/UI. Desde aplicaciones responsivas hasta
+                    herramientas de análisis para el sector de la construcción,
+                    cada proyecto refleja mi enfoque en la innovación, la
+                    eficiencia y la calidad.
+                    
                   </div>
                   <ButtonLink />
                 </div>
@@ -71,7 +65,6 @@ function page() {
             </div>
           </div>
         </div>
-        <Filter />
         <div className="w-[80%] mx-auto text-center items-center grid grid-cols-4 max-[1024px]:grid-cols-3 max-[768px]:grid-cols-2 max-[425px]:grid-cols-1 justify-center mt-2 mb-8">
           <CardProyect projects={initialData.proyectos} />
         </div>

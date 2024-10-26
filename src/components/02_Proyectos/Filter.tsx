@@ -1,45 +1,55 @@
 import React from "react";
-import { Button } from "../ui/button";
-import { MdFilterList } from "react-icons/md";
-import { MdOutlineSpatialTracking } from "react-icons/md";
-import { GiProgression } from "react-icons/gi";
+import { useState } from "react"
+import { Project } from "@/interfaces";
 
-function Filter() {
+interface Props {
+  projects: Project[];
+}
+
+export  const Filter = ({ projects }: Props) => {
+  const rowsPerPage = 8;
+  const [currentPage, setCurrentPage] = useState(1);
+  const [statusFilter, setStatusFilter] = useState<string>(""); // Estado del filtro
+
+  // Filtrar proyectos según el estado seleccionado
+  const filteredProjects = statusFilter
+    ? projects.filter(project => project.status === statusFilter)
+    : projects;
+
+  const totalPages = Math.ceil(filteredProjects.length / rowsPerPage);
+  const currentProjects = filteredProjects.slice((currentPage - 1) * rowsPerPage, currentPage * rowsPerPage);
+
+  const handlePrevious = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+    }
+  };
+
+  const handleNext = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
+
+
   return (
     <>
-      <div className="flex max-[425px]:flex-col px-2 max-[425px]:px-0 w-[80%] mt-3 justify-between mx-auto space-x-2 max-[425px]:space-x-0 items-center">
-        <div className="flex space-x-2 items-center">
-          <p className="text-black dark:text-white text-lg lnueva font-bold max-[425px]:mb-2"></p>
-        </div>
-        <div className="flex space-x-2">
-          <Button className="border-slate-300 max-[425px]:border bg-white ">
-            <a className="flex space-x-2 items-center text-gray-500" href="#">
-              <MdOutlineSpatialTracking className="max-[425px]:hidden" />
-              <label className="max-[425px]:text-[10px] font-normal text-[10px]">
-                Estado
-              </label>{" "}
-            </a>
-          </Button>
-          <Button className="border-slate-300 max-[425px]:border bg-white ">
-            <a className="flex space-x-2 items-center text-gray-500" href="#">
-              <GiProgression className="max-[425px]:hidden" />
-              <label className="max-[425px]:text-[10px] font-normal text-[10px]">
-                Progreso
-              </label>
-            </a>
-          </Button>
-          <Button className="border-slate-300 max-[425px]:border bg-white ">
-            <a className="flex space-x-2 items-center text-gray-500" href="#">
-              <MdFilterList className="max-[425px]:hidden" />
-              <label className="max-[425px]:text-[10px] font-normal text-[10px]">
-                Filtrado
-              </label>
-            </a>
-          </Button>
-        </div>
+      <div className="mb-4">
+        <select
+          value={statusFilter}
+          onChange={(e) => {
+            setStatusFilter(e.target.value);
+            setCurrentPage(1); // Reiniciar la página al cambiar el filtro
+          }}
+          className="border rounded-md p-2"
+        >
+          <option value="">Todos</option>
+          <option value="Terminado">Terminado</option>
+          <option value="Pendiente">Pendiente</option>
+          <option value="En Desarrollo">En Desarrollo</option>
+        </select>
       </div>
     </>
   );
-}
+};
 
-export default Filter;

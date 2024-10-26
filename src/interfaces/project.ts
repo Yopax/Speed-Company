@@ -1,4 +1,6 @@
 export interface Project {
+    
+    id: number;
     slug: string;
     status: "Terminado"|"Pendiente"| "En Desarrollo";
     title: string;
