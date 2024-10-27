@@ -56,7 +56,7 @@ function ProyectDetails({ params }: { params: { slug: string } }) {
                     ></a>
                   </div>
                   <Button className=" border-sky-700 bg-sky-200 space-x-2 max-[425px]:text-text-xs">
-                    <a href="#">
+                    <a target="_blank" href={project.url}>
                       <GoArrowUpRight 
                       className="text-xs lnueva text-sky-700" />
                     </a>
@@ -81,10 +81,10 @@ function ProyectDetails({ params }: { params: { slug: string } }) {
         <h2 className="w-[80%] mx-auto mt-6 text-black dark:text-white text-lg lnueva font-bold max-[425px]:mb-2">
           Fotos
         </h2>
-        <div className="grid w-[80%] h-[800px] mb-8 mt-4  mx-auto grid-cols-4 grid-rows-3 gap-4 rounded-lg">
-          <div className="col-span-4  border rounded-lg">
+        <div className="grid w-[80%] h-[1000px] mb-8 mt-4  mx-auto grid-cols-4 grid-rows-3 gap-4 rounded-lg">
+          <div className="col-span-4   border rounded-lg">
             <img
-              className="w-full h-full object-cover rounded-lg" // Ajusta el tamaño de la imagen
+              className="w-full h-full object-cover object-top rounded-lg" // Ajusta el tamaño de la imagen
               src={`/${project.images}`} // Asegúrate de que la ruta de la imagen es correcta
               alt={`Imagen de ${project.title}`}
             />
