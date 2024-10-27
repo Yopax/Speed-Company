@@ -45,9 +45,7 @@ function ProyectDetails({ params }: { params: { slug: string } }) {
                     
                   </div>
                   <div className="font-normal max-[425px]:w-full py-3 max-[425px]:pt-3 max-[425px]:pb-0 inter">
-                    <a className=" underline  decoration-sky-500 font-bold">
-                      Speed S.A.C.
-                    </a>{" "}
+                  
                     {project.description}
                     <a
                       target="_blank"
@@ -81,7 +79,7 @@ function ProyectDetails({ params }: { params: { slug: string } }) {
         <h2 className="w-[80%] mx-auto mt-6 text-black dark:text-white text-lg lnueva font-bold max-[425px]:mb-2">
           Fotos
         </h2>
-        <div className="grid w-[80%] h-[1000px] mb-8 mt-4  mx-auto grid-cols-4 grid-rows-3 gap-4 rounded-lg">
+        <div className="grid w-[80%] h-[1400px] mb-8 mt-4  mx-auto grid-cols-4 grid-rows-3 gap-4 rounded-lg">
           <div className="col-span-4   border rounded-lg">
             <img
               className="w-full h-full object-cover object-top rounded-lg" // Ajusta el tamaño de la imagen
