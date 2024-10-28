@@ -87,14 +87,48 @@ function ProyectDetails({ params }: { params: { slug: string } }) {
               alt={`Imagen de ${project.title}`}
             />
           </div>
-          <div className="col-span-2 row-start-2 border rounded-lg">2</div>
-          <div className="col-span-2 col-start-3 row-start-2 border rounded-lg">
-            3
+          <div className="col-span-2 row-start-2 border rounded-lg">
+          <img
+              className="w-full h-full object-cover object-left rounded-lg" // Ajusta el tamaño de la imagen
+              src={`/${project.img2}`} // Asegúrate de que la ruta de la imagen es correcta
+              alt={`Imagen de ${project.title}`}
+            />
           </div>
-          <div className="row-start-3 border rounded-lg">4</div>
-          <div className="row-start-3 border rounded-lg">5</div>
-          <div className="row-start-3 border rounded-lg">6</div>
-          <div className="row-start-3 border rounded-lg">7</div>
+          <div className="col-span-2 col-start-3 row-start-2 border rounded-lg">
+          <img
+              className="w-full h-full object-cover object-left rounded-lg" // Ajusta el tamaño de la imagen
+              src={`/${project.img3}`} // Asegúrate de que la ruta de la imagen es correcta
+              alt={`Imagen de ${project.title}`}
+            />
+          </div>
+          <div className="row-start-3 border rounded-lg">
+            <img
+              className="w-full h-full object-cover object-center rounded-lg" // Ajusta el tamaño de la imagen
+              src={`/${project.img4}`} // Asegúrate de que la ruta de la imagen es correcta
+              alt={`Imagen de ${project.title}`}
+            />
+          </div>
+          <div className="row-start-3 border rounded-lg">
+            <img
+              className="w-full h-full object-cover object-left rounded-lg" // Ajusta el tamaño de la imagen
+              src={`/${project.img5}`} // Asegúrate de que la ruta de la imagen es correcta
+              alt={`Imagen de ${project.title}`}
+            />
+          </div>
+          <div className="row-start-3 border rounded-lg">
+            <img
+              className="w-full h-full object-cover object-left rounded-lg" // Ajusta el tamaño de la imagen
+              src={`/${project.img6}`} // Asegúrate de que la ruta de la imagen es correcta
+              alt={`Imagen de ${project.title}`}
+            />
+          </div>
+          <div className="row-start-3 border rounded-lg">
+            <img
+              className="w-full h-full object-cover object-top rounded-lg" // Ajusta el tamaño de la imagen
+              src={`/${project.img7}`} // Asegúrate de que la ruta de la imagen es correcta
+              alt={`Imagen de ${project.title}`}
+            />
+          </div>
         </div>
       </motion.div>
     </>

@@ -6,6 +6,12 @@ export interface Project {
     title: string;
     description: string;
     images: string[];
+    img2: string;
+  img3: string;
+  img4: string;
+  img5: string;
+  img6: string;
+  img7: string;
     inStock: number;
     url: string;
     progres: number;
