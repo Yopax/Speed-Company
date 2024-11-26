@@ -36,7 +36,7 @@ export default function Home() {
       <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] max-[768px]:mt-10 max-[425px]:mt-1 max-[425px]:w-full before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
         <div className="flex space-x-2 justify-center text-center items-center flex-col">
           <p className="text-5xl 2xl:text-7xl max-[425px]:text-2xl max-[425px]:w-full max-[425px]:pt-2 w-[90%] font-extrabold text-black dark:text-white">
-            FrontEnd Developer jr
+            Web Developer
           </p>
           <p className="py-4 2xl:text-xl">
             Apasionado por la programación y optimización de procesos
@@ -58,8 +58,9 @@ export default function Home() {
             </span>
           </h2>
           <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Descubre nuestros proyectos integrando tecnología avanzada y
-            construcción eficiente.
+            Cada proyecto ha sido
+            desarrollado por mí, con el objetivo de fomentar la aplicación de la programación en
+            la ingeniería civil.{" "}
           </p>
         </a>
 
@@ -94,7 +95,7 @@ export default function Home() {
             </span>
           </h2>
           <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Aprende con nosotros a implementar soluciones tecnológicas en el
+            Aprende a implementar soluciones tecnológicas en el
             sector de la construcción.
           </p>
         </a>
@@ -111,7 +112,7 @@ export default function Home() {
             </span>
           </h2>
           <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Hablemos sobre cómo podemos construir el futuro juntos, con
+            Hablemos sobre cómo podemos construir juntos, con
             innovación y precisión.
           </p>
         </a>
