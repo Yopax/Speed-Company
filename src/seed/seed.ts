@@ -30,9 +30,9 @@ export const initialData: SeedData = {
   proyectos: [
     {
       id: 1,
-      title: "01-. Curie Academy",
+      title: "01-. Estudio Libre",
       description:
-        "Curie Academy, consiste en el desarrollo de una aula virtual gratuita, diseñada para ofrecer cursos y artículos educativos de forma accesible y organizada. La plataforma permitirá a los estudiantes y usuarios en general acceder a contenido educativo sin costo, promoviendo el aprendizaje inclusivo y la educación continua.",
+        "Estudio Libre, consiste en el desarrollo de una aula virtual gratuita, diseñada para ofrecer cursos y artículos educativos de forma accesible y organizada. La plataforma permitirá a los estudiantes y usuarios en general acceder a contenido educativo sin costo, promoviendo el aprendizaje inclusivo y la educación continua.",
       status: "En Desarrollo",
       images: ["a1.webp"],
       img2: "a2.webp",
@@ -42,12 +42,12 @@ export const initialData: SeedData = {
       img6: "a6.webp",
       img7: "a7.webp",
       inStock: 7,
-      progres: 85,
-      proti: "85",
-      url: "https://curie-mauve.vercel.app/",
+      progres: 100,
+      proti: "100",
+      url: "https://estudio-libre.vercel.app/",
       stack: ["React", "js", "nextjs", "zustand", "tailwincss"],
-      slug: "curie_academy",
-      statuscolor: "outline",
+      slug: "estudio_libre",
+      statuscolor: "default",
     },
     {
       id: 2,
